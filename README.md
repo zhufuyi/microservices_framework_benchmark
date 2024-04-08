@@ -1,6 +1,6 @@
-## 对比kratos、go-zero、sponge三个微服务框架创建的http和gprc服务的性能测试
+## kratos、go-zero、sponge三个微服务框架创建的http和gprc服务的性能测试
 
-kratos、go-zero、sponge创建的http和grpc服务在同样的环境下进行压测。
+kratos、go-zero、sponge创建的http和grpc服务在同样的环境下进行性能压测。
 
 #### 主要压测指标
 
@@ -17,12 +17,13 @@ kratos、go-zero、sponge创建的http和grpc服务在同样的环境下进行�
     - 端口: 8080
     - 路由: /api/v1/helloworld/qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnm
     - 请求方法: GET
-    - 采集go指标的路由: /metrics
 - **grpc**
     - 端口: 8282
     - path: /helloworld.v1.Greeter/SayHello
     - message: qwertyuiopasdfghjklzxcvbnmqwertyuiopasdfghjklzxcvbnm
     - 类型: unary
+
+注： 8080端口的路由/metrics是采集go程序的指标。
 
 <br>
 
@@ -51,13 +52,13 @@ kratos、go-zero、sponge创建的http和grpc服务在同样的环境下进行�
 
 #### 压测结果
 
-并发50，100万个请求，压测kratos、go-zero、sponge创建的`http`服务结果比较：
+并发50，总共100万个请求，压测kratos、go-zero、sponge创建的`http`服务结果：
 
 ![http-server](test/assets/http-server.png)
 
 <br>
 
-并发50，100万个请求，压测kratos、go-zero、sponge创建的`grpc`服务结果比较：
+并发50，总共100万个请求，压测kratos、go-zero、sponge创建的`grpc`服务结果：
 
 ![grpc-server](test/assets/grpc-server.png)
 
@@ -65,13 +66,13 @@ kratos、go-zero、sponge创建的http和grpc服务在同样的环境下进行�
 
 ---
 
-### kratos 创建的服务的压测结果
+### kratos 创建的服务的压测结果数据
 
 kratos 版本 2.7.2
 
-#### http 压测结果
+#### http 压测结果数据
 
-使用压测工具k6，50个并发，总共100万次请求的结果：
+使用压测工具k6，50个并发，总共100万次请求的结果数据：
 
 ```bash
 $ K6_PROMETHEUS_RW_SERVER_URL="http://192.168.3.37:9090/api/v1/write" K6_PROMETHEUS_RW_TREND_STATS="min,max,avg,p(95),p(99)" K6_PROMETHEUS_RW_PUSH_INTERVAL=1s k6 run -u 50 -i 1000000 -o experimental-prometheus-rw http-load-test.js
@@ -120,9 +121,9 @@ default ✓ [======================================] 50 VUs  00m58.5s/10m0s  100
 
 <br>
 
-#### grpc 压测结果
+#### grpc 压测结果数据
 
-使用压测工具ghz，50个并发，总共100万次请求的结果。
+使用压测工具ghz，50个并发，总共100万次请求的结果数据。
 
 压测grpc api指标的grafana界面：
 
@@ -136,13 +137,13 @@ default ✓ [======================================] 50 VUs  00m58.5s/10m0s  100
 
 <br>
 
-### go-zero 创建的服务的压测结果
+### go-zero 创建的服务的压测结果数据
 
 go-zero 版本 1.6.3
 
-#### http 压测结果
+#### http 压测结果数据
 
-使用压测工具k6，50个并发，总共100万次请求的结果：
+使用压测工具k6，50个并发，总共100万次请求的结果数据：
 
 ```bash
 $ K6_PROMETHEUS_RW_SERVER_URL="http://192.168.3.37:9090/api/v1/write" K6_PROMETHEUS_RW_TREND_STATS="min,max,avg,p(95),p(99)" K6_PROMETHEUS_RW_PUSH_INTERVAL=1s k6 run -u 50 -i 1000000 -o experimental-prometheus-rw http-load-test.js
@@ -191,9 +192,9 @@ default ✓ [======================================] 50 VUs  01m02.9s/10m0s  100
 
 <br>
 
-#### grpc 压测结果
+#### grpc 压测结果数据
 
-使用压测工具ghz，50个并发，总共100万次请求的结果。
+使用压测工具ghz，50个并发，总共100万次请求的结果数据。
 
 压测grpc api指标的grafana界面：
 
@@ -207,13 +208,13 @@ default ✓ [======================================] 50 VUs  01m02.9s/10m0s  100
 
 <br>
 
-### sponge 创建的服务的压测结果
+### sponge 创建的服务的压测结果数据
 
 sponge 版本 1.7.0
 
-#### http 压测结果
+#### http 压测结果数据
 
-使用压测工具k6，50个并发，总共100万次请求的结果：
+使用压测工具k6，50个并发，总共100万次请求的结果数据：
 
 ```bash
 $ K6_PROMETHEUS_RW_SERVER_URL="http://192.168.3.37:9090/api/v1/write" K6_PROMETHEUS_RW_TREND_STATS="min,max,avg,p(95),p(99)" K6_PROMETHEUS_RW_PUSH_INTERVAL=1s k6 run -u 50 -i 1000000 -o experimental-prometheus-rw http-load-test.js
@@ -261,9 +262,9 @@ default ✓ [======================================] 50 VUs  00m56.4s/10m0s  100
 
 <br>
 
-#### grpc 压测结果
+#### grpc 压测结果数据
 
-使用压测工具ghz，50个并发，总共100万次请求的结果。
+使用压测工具ghz，50个并发，总共100万次请求的结果数据。
 
 压测grpc api指标的grafana界面：
 
