@@ -36,7 +36,5 @@ func NewGreeterServer() helloworldV1.GreeterServer {
 
 // SayHello Sends a greeting
 func (s *greeter) SayHello(ctx context.Context, req *helloworldV1.HelloRequest) (*helloworldV1.HelloReply, error) {
-	return &helloworldV1.HelloReply{
-		Message: req.Name,
-	}, nil
+	return &helloworldV1.HelloReply{Message: req.Name}, nil
 }

@@ -7,7 +7,13 @@
 
 > sponge micro grpc-http-pb --module-name=helloworld --server-name=helloworld --project-name=helloworld --protobuf-file=./greeter.proto
 
-2. 启动服务
+2. 打开代码文件 internal/service/greeter.go， 把去掉代码 panic("implement me")，添加代码：
+
+```go
+return &helloworldV1.HelloReply{Message: req.Name}, nil
+```
+
+3. 启动服务
 
 ```bash
 # 生成代码
@@ -17,7 +23,7 @@ make proto
 make run
 ```
 
-3. 测试api
+4. 测试api
 
 - 在浏览器访问 http://localhost:8080/apis/swagger/index.html ，测试http api
 - 使用goland或vs code 打开代码 helloworld/internal/service/greeter._client_test.go，填写参数测试grpc api
