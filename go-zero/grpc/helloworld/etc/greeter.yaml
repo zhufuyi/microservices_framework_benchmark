@@ -1,0 +1,6 @@
+Name: helloworld.rpc
+ListenOn: 0.0.0.0:8282
+#Etcd:
+#  Hosts:
+#  - 127.0.0.1:2379
+#  Key: helloworld.rpc

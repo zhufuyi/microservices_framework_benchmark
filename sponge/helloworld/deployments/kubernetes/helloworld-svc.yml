@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: helloworld-svc
+  namespace: helloworld
+spec:
+  selector:
+    app: helloworld
+  type: ClusterIP
+  ports:
+    - name: helloworld-svc-grpc-port
+      port: 8282
+      targetPort: 8282
+    - name: helloworld-svc-grpc-metrics-port
+      port: 8283
+      targetPort: 8283
+
