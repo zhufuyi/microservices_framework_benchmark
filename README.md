@@ -52,13 +52,13 @@ kratos、go-zero、sponge创建的http和grpc服务在同样的环境下进行�
 
 #### 压测结果
 
-并发50，总共100万个请求，压测kratos、go-zero、sponge创建的`http`服务结果：
+50个并发，总共100万个请求，压测kratos、go-zero、sponge创建的`http`服务结果：
 
 ![http-server](test/assets/http-server.png)
 
 <br>
 
-并发50，总共100万个请求，压测kratos、go-zero、sponge创建的`grpc`服务结果：
+50个并发，总共100万个请求，压测kratos、go-zero、sponge创建的`grpc`服务结果：
 
 ![grpc-server](test/assets/grpc-server.png)
 
@@ -125,7 +125,7 @@ default ✓ [======================================] 50 VUs  00m58.5s/10m0s  100
 
 使用压测工具ghz，50个并发，总共100万次请求的结果数据。
 
-压测grpc api指标的grafana界面：
+grpc api压测结果数据：
 
 ![kratos-grpc-ghz](test/assets/kratos/kratos-grpc-ghz.png)
 
@@ -196,7 +196,7 @@ default ✓ [======================================] 50 VUs  01m02.9s/10m0s  100
 
 使用压测工具ghz，50个并发，总共100万次请求的结果数据。
 
-压测grpc api指标的grafana界面：
+grpc api压测结果数据：
 
 ![go-zero-grpc-ghz](test/assets/go-zero/go-zero-grpc-ghz.png)
 
@@ -266,7 +266,7 @@ default ✓ [======================================] 50 VUs  00m56.4s/10m0s  100
 
 使用压测工具ghz，50个并发，总共100万次请求的结果数据。
 
-压测grpc api指标的grafana界面：
+grpc api的压测结果数据：
 
 ![sponge-grpc-ghz](test/assets/sponge/sponge-grpc-ghz.png)
 

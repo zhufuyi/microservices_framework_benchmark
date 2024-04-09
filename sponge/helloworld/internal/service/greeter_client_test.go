@@ -92,7 +92,13 @@ func Test_service_greeter_benchmark(t *testing.T) {
 				}
 				total := 1000000 // total number of requests
 
-				b, err := benchmark.New(host, protoFile, "SayHello", message, dependentProtoFilePath, total)
+				options := []benchmark.Option{
+					// need to import "github.com/bojand/ghz/runner"
+					//runner.WithConcurrency(100), // 默认 50
+					//runner.WithRunDuration(time.Minute), // 如果设置了RunDuration, total参数无效
+				}
+
+				b, err := benchmark.New(host, protoFile, "SayHello", message, dependentProtoFilePath, total, options...)
 				if err != nil {
 					return err
 				}

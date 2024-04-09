@@ -66,7 +66,7 @@ bash test.sh http 50 1000000
 
 切换到目录`sponge/helloworld/internal/service`。
 
-并发50个协程，100万次请求，执行命令压测grpc api：
+50个并发，总共100万次请求，执行命令压测grpc api：
 
 ```bash
 go test -run Test_service_greeter_benchmark/SayHello
@@ -112,7 +112,7 @@ make run-nohup-grpc
 
 切换到目录`sponge/helloworld/internal/service`。
 
-并发50个协程，100万次请求，执行命令压测grpc api：
+50个并发，总共100万次请求，执行命令压测grpc api：
 
 ```bash
 go test -run Test_service_greeter_benchmark/SayHello
@@ -145,7 +145,7 @@ bash test.sh http 50 1000000
 
 切换到目录`sponge/helloworld/internal/service`。
 
-并发50个协程，100万次请求，执行命令压测grpc api：
+50个并发，总共100万次请求，执行命令压测grpc api：
 
 ```bash
 go test -run Test_service_greeter_benchmark/SayHello
