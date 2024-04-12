@@ -1,7 +1,5 @@
 ## kratos、go-zero、sponge三个微服务框架创建的http和gprc服务的性能测试
 
-kratos、go-zero、sponge创建的http和grpc服务在同样的环境下进行性能压测。
-
 #### 主要压测指标
 
 - **吞吐量(Throughput)**：单位时间内处理的请求数量，通常以每秒请求数(Requests per Second，RPS)表示。
@@ -36,7 +34,7 @@ kratos、go-zero、sponge创建的http和grpc服务在同样的环境下进行�
 
 #### 压测环境
 
-因为不同的服务器硬件对性能压测结果不一样，本次是在宿主机和虚拟机之间进行负载测试：
+因为不同的服务器硬件对性能测试结果不一样，本次是在宿主机和虚拟机之间进行负载测试：
 
 - 宿主机
   - 硬件：R7 6800H CPU，16G内存
@@ -275,4 +273,3 @@ grpc api的压测结果数据：
 ![sponge-grpc-cpu](test/assets/sponge/sponge-grpc-cpu.png)
 
 ![sponge-grpc-go-process](test/assets/sponge/sponge-grpc-go-process.png)
-

@@ -1,0 +1,6 @@
+process_names:
+  - comm:
+    - helloworld
+    - http_helloworld
+    - grpc_helloworld
+

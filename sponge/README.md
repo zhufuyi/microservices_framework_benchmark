@@ -34,7 +34,7 @@ make run
 
 ### 启动和停止服务
 
-切换到目录 kratos/helloworld
+切换到目录 sponge/helloworld
 
 ```bash
 # 后台启动http服务，日志输出到文件 helloworld.log
@@ -43,3 +43,5 @@ make run-nohup
 # 停止服务
 make run-http-nohup CMD=stop
 ```
+
+> 注： 性能测试时必须在后台运行服务，如果直接在终端运行服务，大部分性能会损耗在打印日志到终端上，压测就没意义了。

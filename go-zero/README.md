@@ -102,3 +102,6 @@ make run-grpc-nohup
 # 停止服务
 make run-grpc-nohup CMD=stop
 ```
+
+> 注： 性能测试时必须在后台运行服务，如果直接在终端运行服务，大部分性能会损耗在打印日志到终端上，压测就没意义了。
+

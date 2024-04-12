@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  prometheus:
+    image: prom/prometheus:v2.47.0
+    container_name: prometheus
+    restart: always
+    command:
+      - --web.enable-remote-write-receiver
+      - --enable-feature=native-histograms
+      - --web.enable-lifecycle
+      - --config.file=/etc/prometheus/prometheus.yml
+    volumes:
+      - $PWD/prometheus.yml:/etc/prometheus/prometheus.yml
+      - $PWD/prometheus_data:/prometheus/data
+    ports:
+      - "9090:9090"
+    networks:
+      - k6
+
+  grafana:
+    image: grafana/grafana:10.1.2
+    container_name: grafana
+    restart: always
+    environment:
+      - GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
+      - GF_AUTH_ANONYMOUS_ENABLED=true
+      - GF_AUTH_BASIC_ENABLED=false
+    volumes:
+      - $PWD/grafana_data/:/var/lib/grafana/
+    ports:
+      - "3000:3000"
+    networks:
+      - k6
+
+networks:
+  k6:
+

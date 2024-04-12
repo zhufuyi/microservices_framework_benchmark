@@ -31,13 +31,13 @@
 
 <br>
 
-### 性能压测
+### 性能测试
 
-压测流程：
+测试流程：
 
-- 在服务器A启动kratos创建的服务(http+grpc)，然后在服务器B分别压测http和grpc的api，压测完成后停止服务。
-- 在服务器A启动go-zero创建的http和grpc服务，然后在服务器B分别压测http和grpc的api，压测完成后停止服务。
-- 在服务器A启动sponge创建的服务(http+grpc)，然后在服务器B分别压测http和grpc的api，压测完成后停止服务。
+- 在服务器A运行kratos创建的http+grpc服务(1个程序文件)，然后在服务器B分别压测http和grpc的api，压测完成后停止服务。
+- 在服务器A运行go-zero创建的http和grpc服务(2个程序文件，不要同时运行http和grpc服务，因为端口8080冲突)，然后在服务器B分别压测http和grpc的api，压测完成后停止服务。
+- 在服务器A运行sponge创建的http+grpc服务(1个程序文件)，然后在服务器B分别压测http和grpc的api，压测完成后停止服务。
 
 <br>
 
