@@ -50,7 +50,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "e001e0ca-1b91-44ed-b3cf-f5e120df5aa7"
+        "uid": "d408553f-a33a-474f-ba16-912057230c24"
       },
       "editable": true,
       "error": false,
@@ -101,7 +101,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "e001e0ca-1b91-44ed-b3cf-f5e120df5aa7"
+            "uid": "d408553f-a33a-474f-ba16-912057230c24"
           },
           "expr": "rate(namedprocess_namegroup_cpu_seconds_total{job=~\"$job\",instance=~\"$instance\",groupname=~\"$processes\"}[$interval]) * 100",
           "interval": "",
@@ -151,7 +151,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "e001e0ca-1b91-44ed-b3cf-f5e120df5aa7"
+        "uid": "d408553f-a33a-474f-ba16-912057230c24"
       },
       "editable": true,
       "error": false,
@@ -201,7 +201,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "e001e0ca-1b91-44ed-b3cf-f5e120df5aa7"
+            "uid": "d408553f-a33a-474f-ba16-912057230c24"
           },
           "expr": "namedprocess_namegroup_memory_bytes{job=~\"$job\",instance=~\"$instance\",groupname=~\"$processes\",memtype=\"resident\"}",
           "intervalFactor": 2,
@@ -250,7 +250,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "e001e0ca-1b91-44ed-b3cf-f5e120df5aa7"
+        "uid": "d408553f-a33a-474f-ba16-912057230c24"
       },
       "editable": true,
       "error": false,
@@ -300,7 +300,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "e001e0ca-1b91-44ed-b3cf-f5e120df5aa7"
+            "uid": "d408553f-a33a-474f-ba16-912057230c24"
           },
           "expr": "rate(namedprocess_namegroup_read_bytes_total{job=~\"$job\",instance=~\"$instance\",groupname=~\"$processes\"}[$interval])",
           "intervalFactor": 2,
@@ -349,7 +349,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "e001e0ca-1b91-44ed-b3cf-f5e120df5aa7"
+        "uid": "d408553f-a33a-474f-ba16-912057230c24"
       },
       "editable": true,
       "error": false,
@@ -399,7 +399,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "e001e0ca-1b91-44ed-b3cf-f5e120df5aa7"
+            "uid": "d408553f-a33a-474f-ba16-912057230c24"
           },
           "expr": "rate(namedprocess_namegroup_write_bytes_total{job=~\"$job\",instance=~\"$instance\",groupname=~\"$processes\"}[$interval])",
           "intervalFactor": 2,
@@ -448,7 +448,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "e001e0ca-1b91-44ed-b3cf-f5e120df5aa7"
+        "uid": "d408553f-a33a-474f-ba16-912057230c24"
       },
       "editable": true,
       "error": false,
@@ -498,7 +498,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "e001e0ca-1b91-44ed-b3cf-f5e120df5aa7"
+            "uid": "d408553f-a33a-474f-ba16-912057230c24"
           },
           "expr": "namedprocess_namegroup_num_procs{job=~\"$job\",instance=~\"$instance\",groupname=~\"$processes\"}",
           "interval": "",
@@ -547,7 +547,7 @@
       "dashes": false,
       "datasource": {
         "type": "prometheus",
-        "uid": "e001e0ca-1b91-44ed-b3cf-f5e120df5aa7"
+        "uid": "d408553f-a33a-474f-ba16-912057230c24"
       },
       "editable": true,
       "error": false,
@@ -597,7 +597,7 @@
         {
           "datasource": {
             "type": "prometheus",
-            "uid": "e001e0ca-1b91-44ed-b3cf-f5e120df5aa7"
+            "uid": "d408553f-a33a-474f-ba16-912057230c24"
           },
           "expr": "namedprocess_namegroup_memory_bytes{job=~\"$job\",instance=~\"$instance\",groupname=~\"$processes\", memtype=\"virtual\"}",
           "intervalFactor": 2,
@@ -655,7 +655,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "e001e0ca-1b91-44ed-b3cf-f5e120df5aa7"
+          "uid": "d408553f-a33a-474f-ba16-912057230c24"
         },
         "definition": "label_values(go_info{job=~'.*process.*'},job)",
         "hide": 0,
@@ -686,7 +686,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "e001e0ca-1b91-44ed-b3cf-f5e120df5aa7"
+          "uid": "d408553f-a33a-474f-ba16-912057230c24"
         },
         "definition": "label_values(go_info{job=~\"$job\"},instance)",
         "hide": 0,
@@ -717,7 +717,7 @@
         },
         "datasource": {
           "type": "prometheus",
-          "uid": "e001e0ca-1b91-44ed-b3cf-f5e120df5aa7"
+          "uid": "d408553f-a33a-474f-ba16-912057230c24"
         },
         "definition": "label_values(namedprocess_namegroup_cpu_seconds_total{instance=~\"$instance\",job=~\"$job\"},groupname)",
         "hide": 0,

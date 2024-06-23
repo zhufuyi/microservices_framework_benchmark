@@ -1,2 +1,7 @@
-启动服务前，把服务名称填写到config/config.yml中
+启动服务前，打开 `config/config.yml` 文件，填写被监控的进程名称。
 
+启动exporter服务：
+
+```bash
+docker-compose up -d
+```

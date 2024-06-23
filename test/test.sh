@@ -36,12 +36,8 @@ function grpcLoadTest() {
 if [ "$testType" == "http" ]; then
   httpLoadTest
 elif [ "$testType" == "grpc" ]; then
-  echo -e "因为使用k6压测grpc服务的性能与ghz相差不少，建议使用ghz来压测。\n
-  sponge已经集成了ghz，并且生成了压测代码，\n
-  打开终端，切换到目录 sponge/helloworld/internal/service，执行命令开始压测： \n
-  go test -run Test_service_greeter_benchmark/SayHello
-  "
-  #grpcLoadTest
+  echo -e "因为k6工具压测grpc服务的本身的性能测试能力有限，建议使用ghz工具来压测获得更准确的结果。\n\n"
+  grpcLoadTest
 else
   echo "Usage: $0 <http|grpc> <VUs> <iterations>"
 fi

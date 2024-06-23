@@ -1920,7 +1920,7 @@
         "current": {
           "selected": false,
           "text": "Prometheus",
-          "value": "e001e0ca-1b91-44ed-b3cf-f5e120df5aa7"
+          "value": "d408553f-a33a-474f-ba16-912057230c24"
         },
         "description": "Choose a Prometheus Data Source",
         "hide": 0,

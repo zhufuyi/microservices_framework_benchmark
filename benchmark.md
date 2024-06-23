@@ -24,11 +24,6 @@
 
 3. 下载代码  git clone https://github.com/zhufuyi/microservices_framework_benchmark.git
 
-4. 配置服务器A的ip地址
-
-- 切换到目录`test`，打开 http-load-test.js 脚本文件，把 `192.168.3.37` 改为服务器A的ip地址，用于测试http服务。
-- 切换到目录`sponge/helloworld/configs`，打开 `helloworld.yml` 配置文件，把配置 `grpcClient` 下的host地址`192.168.3.37` 改为服务器A的ip地址，用于测试grpc服务。
-
 <br>
 
 ### 性能测试
@@ -56,21 +51,11 @@ make run-nohup
 
 2. 在服务器B执行命令压测http api
 
-使用50个虚拟用户，100万次请求，执行命令压测http api：
-
-```bash
-bash test.sh http 50 1000000
-```
+> 点击查看 [test/README.md](test/README.md) 文件里的 http api 压测说明。
 
 3. 在服务器B执行命令压测grpc api
 
-切换到目录`sponge/helloworld/internal/service`。
-
-50个并发，总共100万次请求，执行命令压测grpc api：
-
-```bash
-go test -run Test_service_greeter_benchmark/SayHello
-```
+> 点击查看 [test/README.md](test/README.md) 文件里的 grpc api 压测说明。
 
 <br>
 
@@ -91,11 +76,7 @@ make run-nohup-http
 
 2. 在服务器B执行命令压测http api
 
-使用50个虚拟用户，100万次请求，执行命令压测http api：
-
-```bash
-bash test.sh http 50 1000000
-```
+> 点击查看 [test/README.md](test/README.md) 文件里的 http api 压测说明。
 
 3. 在服务器A运行grpc服务
 
@@ -110,13 +91,7 @@ make run-nohup-grpc
 
 4. 在服务器B执行命令压测grpc api
 
-切换到目录`sponge/helloworld/internal/service`。
-
-50个并发，总共100万次请求，执行命令压测grpc api：
-
-```bash
-go test -run Test_service_greeter_benchmark/SayHello
-```
+> 点击查看 [test/README.md](test/README.md) 文件里的 grpc api 压测说明。
 
 <br>
 
@@ -135,18 +110,8 @@ make run-nohup
 
 2. 在服务器B执行命令压测http api
 
-使用50个虚拟用户，100万次请求，执行命令压测http api：
-
-```bash
-bash test.sh http 50 1000000
-```
+> 点击查看 [test/README.md](test/README.md) 文件里的 http api 压测说明。
 
 3. 在服务器B执行命令压测grpc api
 
-切换到目录`sponge/helloworld/internal/service`。
-
-50个并发，总共100万次请求，执行命令压测grpc api：
-
-```bash
-go test -run Test_service_greeter_benchmark/SayHello
-```
+> 点击查看 [test/README.md](test/README.md) 文件里的 grpc api 压测说明。

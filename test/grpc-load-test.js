@@ -2,7 +2,7 @@ import grpc from 'k6/net/grpc';
 import { check } from 'k6';
 import { Counter, Rate } from "k6/metrics";
 
-// todo 测试前修改待测试的目标服务IP地址
+// todo 测试前修改目标服务地址
 const grpcAddr = '192.168.3.37:8282';
 
 const client = new grpc.Client();
